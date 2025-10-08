@@ -26,8 +26,8 @@
             </Canvas>
         </GroupBox>
         <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Click="btnClear_Click"/>
+        <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Click="btnClose_Click"/>
         <GroupBox x:Name="grpCalculatedWage" Height="128" Header="Calculated Wage" Width="379" Canvas.Left="284" Canvas.Top="258" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold">
             <Canvas>
                 <Label Content="Gross Earnings:" Canvas.Left="10" Canvas.Top="10"/>

@@ -34,5 +34,17 @@ namespace F25Week6MidtermReview
             lblInput2.Content = "Hours Worked:";
             lblInput3.Content = "Hourly Wage:";
         }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            rdoHourly.IsChecked = true;
+            txtName.Text = txtInput2.Text = txtInput3.Text = "";
+            txtGrossEarnings.Text = txtTax.Text = txtNetEarnings.Text = "";
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
