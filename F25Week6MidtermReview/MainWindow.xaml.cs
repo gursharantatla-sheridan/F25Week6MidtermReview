@@ -73,6 +73,9 @@ namespace F25Week6MidtermReview
             txtGrossEarnings.Text = _emp.GrossEarnings().ToString("C");
             txtTax.Text = _emp.Tax().ToString("C");
             txtNetEarnings.Text = _emp.NetEarnings().ToString("C");
+
+            lstEmployees.Items.Add(_emp.Name);
+            _employees.Add(_emp);
         }
     }
 }
