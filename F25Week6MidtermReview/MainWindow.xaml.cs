@@ -77,5 +77,34 @@ namespace F25Week6MidtermReview
             lstEmployees.Items.Add(_emp.Name);
             _employees.Add(_emp);
         }
+
+        private void lstEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstEmployees.SelectedItem != null)
+            {
+                int index = lstEmployees.SelectedIndex;
+                _emp = _employees[index];
+
+                txtName.Text = _emp.Name;
+
+                if (_emp is HourlyEmployee hrEmp)
+                {
+                    //HourlyEmployee hrEmp = _emp as HourlyEmployee;
+                    txtInput2.Text = hrEmp.Hours.ToString();
+                    txtInput3.Text = hrEmp.Wage.ToString();
+                    rdoHourly.IsChecked = true;
+                }
+                else if (_emp is CommissionEmployee commEmp)
+                {
+                    txtInput2.Text = commEmp.GrossSales.ToString();
+                    txtInput3.Text = (commEmp.CommissionRate * 100).ToString();
+                    rdoCommission.IsChecked = true;
+                }
+
+                txtGrossEarnings.Text = _emp.GrossEarnings().ToString("C");
+                txtTax.Text = _emp.Tax().ToString("C");
+                txtNetEarnings.Text = _emp.NetEarnings().ToString("C");
+            }
+        }
     }
 }

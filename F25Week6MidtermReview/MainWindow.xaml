@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
         <Label Content="Employees:" Canvas.Left="140" Canvas.Top="55" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <ListBox x:Name="lstEmployees" Height="305" Width="118" Canvas.Left="140" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="14" FontWeight="Bold"/>
+        <ListBox x:Name="lstEmployees" Height="305" Width="118" Canvas.Left="140" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="14" FontWeight="Bold" SelectionChanged="lstEmployees_SelectionChanged"/>
         <GroupBox x:Name="grpEmployeeType" Height="58" Header="Select Type of Employee" Width="278" Canvas.Left="284" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="14" FontWeight="Bold">
             <Canvas>
                 <RadioButton x:Name="rdoHourly" Content="Hourly Paid" Height="16" Width="107" Canvas.Left="8" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="rdoHourly_Checked"/>
